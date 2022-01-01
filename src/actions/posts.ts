@@ -10,6 +10,8 @@ const useApi = () => {
     try {
       const data = await api.fetchPosts();
 
+      console.log({ data });
+
       setState(() => data, "store.posts");
     } catch (error) {
       console.log(error);
